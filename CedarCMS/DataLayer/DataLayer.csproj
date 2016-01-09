@@ -48,9 +48,9 @@
   <ItemGroup>
     <Compile Include="Context\CedarContext.cs" />
     <Compile Include="Context\IUnitOfWork.cs" />
-    <Compile Include="Migrations\201601050659270_first.cs" />
-    <Compile Include="Migrations\201601050659270_first.Designer.cs">
-      <DependentUpon>201601050659270_first.cs</DependentUpon>
+    <Compile Include="Migrations\201601092052371_create content module.cs" />
+    <Compile Include="Migrations\201601092052371_create content module.Designer.cs">
+      <DependentUpon>201601092052371_create content module.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +66,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601050659270_first.resx">
-      <DependentUpon>201601050659270_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601092052371_create content module.resx">
+      <DependentUpon>201601092052371_create content module.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

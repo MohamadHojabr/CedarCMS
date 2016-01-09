@@ -7,13 +7,13 @@ namespace DataLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
-    public sealed partial class first : IMigrationMetadata
+    public sealed partial class createcontentmodule : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(first));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(createcontentmodule));
         
         string IMigrationMetadata.Id
         {
-            get { return "201601050659270_first"; }
+            get { return "201601092052371_create content module"; }
         }
         
         string IMigrationMetadata.Source
