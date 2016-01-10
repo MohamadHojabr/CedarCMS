@@ -67,6 +67,9 @@ namespace CedarCMS.App_Start
         {
             kernel.Bind<IUnitOfWork>().To<CedarContext>().InRequestScope();
             kernel.Bind<IBlog>().To<EfBlog>().InRequestScope();
+            kernel.Bind<ICategoriesContent>().To<EfCategoriesContent>().InRequestScope();
+            kernel.Bind<IContent>().To<EfContent>().InRequestScope();
+
         }        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using DataLayer.Context;
 using ServiceLayer.IServices;
 
@@ -9,19 +10,23 @@ namespace CedarCMS.Controllers
 
         private IUnitOfWork _uow;
         private IBlog _blog;
+        private ICategoriesContent _categoriesContent;
 
-        
 
-        public HomeController(IUnitOfWork uow, IBlog blog)
+        public HomeController(IUnitOfWork uow, IBlog blog, ICategoriesContent categoriesContent)
         {
             _uow = uow;
             _blog = blog;
+            _categoriesContent = categoriesContent;
+
         }
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-            ViewBag.list = _blog.GetAllBlogs();
+            var cat = _categoriesContent.GetAllCategoriesContents();
+            ViewBag.list = cat;
             return View();
         }
+
     }
 }

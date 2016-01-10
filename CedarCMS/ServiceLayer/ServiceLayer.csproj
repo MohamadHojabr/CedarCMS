@@ -37,6 +37,7 @@
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,7 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFServices\EFBlog.cs" />
+    <Compile Include="EFServices\EfCategoriesContent.cs" />
+    <Compile Include="EFServices\EfContent.cs" />
     <Compile Include="IServices\IBlog.cs" />
+    <Compile Include="IServices\ICategoriesContent.cs" />
+    <Compile Include="IServices\IContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
