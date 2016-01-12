@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using DomainClasses.Models;
 using ServiceLayer.IServices;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using WebGrease.Css.Extensions;
+
+
 
 namespace ServiceLayer.EFServices
 {
@@ -11,37 +17,59 @@ namespace ServiceLayer.EFServices
         {
             var cat = new List<CategoriesContent>
             {
-                new CategoriesContent
+               new CategoriesContent
                 {
-                    CategoriesContentId = new Guid("8cb1eb8a-506b-4da8-9f0a-734ffdff1da8"),
-                    Description = "sfsdsf",
-                    Name = "دسته والد",
-                    ParentId = null,
-                    Priority = 1
-                },
-                new CategoriesContent
-                {
-                    CategoriesContentId = new Guid("5a0d6276-e5c8-498f-89c9-6a68c5e957fa"),
-                    Description = "sfsdsf",
-                    Name = "دسته والد",
-                    ParentId = new Guid("8cb1eb8a-506b-4da8-9f0a-734ffdff1da8"),
-                    Priority = 1
-                },
-                new CategoriesContent
-                {
-                    CategoriesContentId = new Guid("33583877-759a-46e6-a888-69a547ba0e6c"),
-                    Description = "sfsdsf",
-                    Name = "دسته والد",
-                    ParentId = new Guid("8cb1eb8a-506b-4da8-9f0a-734ffdff1da8"),
-                    Priority = 1
-                },
-                new CategoriesContent
-                {
-                    CategoriesContentId = new Guid("49538bc1-f190-42d1-9d8c-37ea6355c972"),
-                    Description = "sfsdsf",
-                    Name = "دسته والد",
-                    ParentId = null,
-                    Priority = 1
+                    CategoriesContentId = 1,
+                    Name = "Root",
+                    Children = new Collection<CategoriesContent>
+                    {
+                        new CategoriesContent
+                        {
+                            CategoriesContentId = 2,
+                            Name = "Games",
+                            Children = new Collection<CategoriesContent>
+                            {
+                                new CategoriesContent
+                                {
+                                    CategoriesContentId = 3,
+                                    Name = "PSP",
+                                    Children = Enumerable.Empty<CategoriesContent>().ToSafeReadOnlyCollection(),
+                                },
+                                new CategoriesContent
+                                {
+                                    CategoriesContentId = 4,
+                                    Name = "PC",
+                                    Children = Enumerable.Empty<CategoriesContent>().ToSafeReadOnlyCollection(),
+                                },
+                                new CategoriesContent
+                                {
+                                    CategoriesContentId = 5,
+                                    Name = "PS3",
+                                    Children = Enumerable.Empty<CategoriesContent>().ToSafeReadOnlyCollection(),
+                                },
+                            }
+                        },
+                        new CategoriesContent
+                        {
+                            CategoriesContentId = 6,
+                            Name = "Application",
+                            Children = new Collection<CategoriesContent>
+                            {
+                                new CategoriesContent
+                                {
+                                    CategoriesContentId = 7,
+                                    Name = "Windows",
+                                    Children = Enumerable.Empty<CategoriesContent>().ToSafeReadOnlyCollection(),
+                                },
+                                new CategoriesContent
+                                {
+                                    CategoriesContentId = 8,
+                                    Name = "Android",
+                                    Children = Enumerable.Empty<CategoriesContent>().ToSafeReadOnlyCollection(),
+                                }
+                            }
+                        }
+                    }
                 }
             };
 
