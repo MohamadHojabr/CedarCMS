@@ -26,7 +26,7 @@ namespace CedarCMS.Controllers
         // GET api/values
         public IList<CategoriesContent> Get()
         {
-            var list = _categoriesContent.GetAllCategoriesContents();
+            var list = _categoriesContent.GetAllCategoriesContents().ToList();
                 
             return list;
         }
