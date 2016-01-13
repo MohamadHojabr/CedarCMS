@@ -8,13 +8,13 @@ using DomainClasses.Models;
 
 namespace ServiceLayer.IServices
 {
-    public interface ICategoriesContent
+    public interface ICategoriesContent : IDisposable
     {
-        IList<CategoriesContent> GetAllCategoriesContents();
-        CategoriesContent Get(int id);
-        CategoriesContent Add(CategoriesContent categoriesContent);
-        void Remove(int id);
-        bool Update(CategoriesContent categoriesContent);
-
+        IEnumerable<CategoriesContent> GetAllCategoriesContents();
+        CategoriesContent GetCategoriesContentById(int categoriesContentId);
+        void InsertCategoriesContent(CategoriesContent categoriesContent);
+        void DeleteCategoriesContent(int categoriesContentId);
+        void UpdateCategoriesContent(CategoriesContent categoriesContent);
+        void Save();
     }
 }
