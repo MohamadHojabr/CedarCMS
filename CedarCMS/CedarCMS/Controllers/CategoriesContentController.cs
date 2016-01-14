@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 using System.Web.Http;
 using DataLayer.Context;
 using DomainClasses.Models;
@@ -26,10 +27,10 @@ namespace CedarCMS.Controllers
         public IHttpActionResult GetCategoriesContentsById(int id)
         {
             var item = _categoriesContent.GetCategoriesContentById(id);
-            
+
             if (item == null)
             {
-                return NotFound();
+                throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
             return Ok(item);
