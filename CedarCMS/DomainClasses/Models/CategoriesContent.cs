@@ -10,20 +10,14 @@ namespace DomainClasses.Models
 {
     public class CategoriesContent
     {
-        public CategoriesContent()
-        {
-            CategoriesContentId = Guid.NewGuid();
-        }
         [Key]
-        public Guid CategoriesContentId { get; set; }
+        public int CategoriesContentId { get; set; }
         [Required]
         [DisplayName("نام دسته مطلب")]
         public string Name { get; set; }
-        [DisplayName("اولویت دسته")]
-        public int Priority { get; set; }
         [DisplayName("توضیحات")]
         public string Description { get; set; }
-        public Guid? ParentId { get; set; }
+        public int? ParentId { get; set; }
 
         [DisplayName("گروه بالا دستی")]
         public virtual CategoriesContent Parent { get; set; }

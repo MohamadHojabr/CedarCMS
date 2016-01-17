@@ -52,6 +52,10 @@
     <Compile Include="Migrations\201601092052371_create content module.Designer.cs">
       <DependentUpon>201601092052371_create content module.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601100708557_create content module.cs" />
+    <Compile Include="Migrations\201601100708557_create content module.Designer.cs">
+      <DependentUpon>201601100708557_create content module.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601092052371_create content module.resx">
       <DependentUpon>201601092052371_create content module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601100708557_create content module.resx">
+      <DependentUpon>201601100708557_create content module.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

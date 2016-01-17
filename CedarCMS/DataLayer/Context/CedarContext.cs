@@ -29,7 +29,6 @@ namespace DataLayer.Context
         public DbSet<Content> Contents { set; get; }
 
 
-
         #region IUnitOfWork Members
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
